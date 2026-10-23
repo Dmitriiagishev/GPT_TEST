@@ -1,0 +1,13 @@
+[package]
+name = "ascii-dodecahedron"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+description = "A rotating, shaded, full-color ASCII dodecahedron for the terminal"
+
+[dependencies]
+crossterm = { version = "0.29", default-features = false, features = ["events"] }
+
+[profile.release]
+lto = "thin"
+strip = true
